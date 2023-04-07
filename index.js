@@ -9,20 +9,16 @@ app.use(express.json())
 app.use('/',routes)
 dotenv.config()
 
-app.use((err,req,res,next)=>{
-    const status = err.status ||500;
-    const massage = err.massage ||'Something wrong';
-    return res.status(status).json({
-        sucess:false,
-        status,massage
-    })
-})
+ 
 
 app.listen(process.env.Port,(res,err)=>{
     if(err) throw err;
     console.log(`server is runing ${process.env.Port}!`)
      dbConnetion()
 })
+
+
+
 
 
 
