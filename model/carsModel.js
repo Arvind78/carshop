@@ -11,3 +11,4 @@ const carModel = mongoose.Schema({
 
 module.exports = mongoose.model("car",carModel)
 
+

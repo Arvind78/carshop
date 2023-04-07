@@ -9,7 +9,6 @@ app.use(express.json())
 app.use('/',routes)
 dotenv.config()
 
- 
 
 app.listen(process.env.Port,(res,err)=>{
     if(err) throw err;
